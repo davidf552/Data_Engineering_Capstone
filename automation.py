@@ -10,8 +10,8 @@ cursor = connection.cursor()
 
 # Connect to DB2
 dsn_hostname = "2f3279a5-73d1-4859-88f0-a6c3e6b4b907.c3n41cmd0nqnrk39u98g.databases.appdomain.cloud"
-dsn_uid = "jrn07074"        # e.g. "abc12345"
-dsn_pwd = "SJQJitWnnj1LWkD3"      # e.g. "7dBZ3wWt9XN6$o0J"
+dsn_uid = <user>        # e.g. "abc12345"
+dsn_pwd = <password>      # e.g. "7dBZ3wWt9XN6$o0J"
 dsn_port = "30756"                # e.g. "50000" 
 dsn_database = "bludb"            # i.e. "BLUDB"
 dsn_driver = "{IBM DB2 ODBC DRIVER}" # i.e. "{IBM DB2 ODBC DRIVER}"           
