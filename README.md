@@ -89,7 +89,7 @@ A data source is then created in order to link db2 with Cognos. After a successf
 
 [Return](#introduction)
 ## Module 5: ETL and Apache Airflow
-The data warehouse gets information from several sources, including the transactional OLTP database (MySQL). The OLTP database needs to be propagated to the warehouse on a frequent basis. This data movement can be updated using ETL processes. To connect Mysql and db2, a Python script called "automation.py" will be used.
+The data warehouse gets information from several sources, including the transactional OLTP database (MySQL). The OLTP database needs to be propagated to the warehouse on a frequent basis. This data movement can be updated using ETL processes. To connect Mysql and db2, a Python script called ["automation.py"](automation.py) will be used.
 
 
 The script will automatically load yesterday's data from the production database into the warehouse.
@@ -98,10 +98,7 @@ The script will automatically load yesterday's data from the production database
 The data platform includes a Big Data repository that is used for analytics using machine learning with Apache Spark. This big data repository gets data from several sources including the data warehouse and the web server log. As data from the web server is logged, it needs to be added to the big data system on a frequent basis, therefore making it an ideal process to automate using a data pipeline.
 
 
-Using Apache Airflow, daily data from the web server log will be extracted, processed and stored in a format to prepare it for loading into the big data platform. The DAG will be called "process_web_log"
-
-
-The mentioned files **"automation.py"** and **"process_web_log.py"** will be available inside this repository.
+Using Apache Airflow, daily data from the web server log will be extracted, processed and stored in a format to prepare it for loading into the big data platform. The DAG will be called ["process_web_log"](process_web_log.py)
 
 
 [Return](#introduction)
