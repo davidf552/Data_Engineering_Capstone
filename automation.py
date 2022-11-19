@@ -5,7 +5,7 @@ import mysql.connector
 import ibm_db
 
 # Connect to MySQL
-connection = mysql.connector.connect(user='root', password='MTA2NjMtZGhmcmVp',host='127.0.0.1',database='sales')
+connection = mysql.connector.connect(user='root', password=<password>,host='127.0.0.1',database='sales')
 cursor = connection.cursor()
 
 # Connect to DB2
