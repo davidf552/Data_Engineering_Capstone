@@ -60,16 +60,53 @@ With that said, the company would like to create a data warehouse so that it can
 - Total sales per category per country.
 
 
-The warehouse will be designed according to the following initial diagram made using PgAdmin:
+The warehouse will be designed according to the following initial diagram created on PgAdmin:
 ![softcartRelationships](https://user-images.githubusercontent.com/103103116/202838268-60f71c93-e1ef-4608-9dfd-5df056c14bd4.PNG)
 
+The schema will then be exported into the file named "staging.sql"
+![createschema](https://user-images.githubusercontent.com/103103116/202838516-02af1b59-629a-45df-a3e6-92e457d9754c.PNG)
 
 [Return](#introduction)
 ## Module 4: Reporting dashboard
+With the data warehouse successfully created, the company now requires a dashboard that shows the key metrics of the business. In this module, ***IBM db2*** and ***Cognos*** will be used to solve this problem.
 
+First, data is imported to IBM db2 from a csv file:
+
+
+![dataimport](https://user-images.githubusercontent.com/103103116/202838772-866dbebf-3eb6-4539-a5ae-867e7d132d95.PNG)
+
+A data source is then created in order to link db2 with Cognos. After a successful connection, a simple dashboard is created with the following reports:
+
+- Total monthly sales from 2020
+
+
+![linechart](https://user-images.githubusercontent.com/103103116/202838959-4e36cf1f-4a7d-4387-943a-6f3616024a0c.PNG)
+
+- Total sales by category
+
+
+![piechart](https://user-images.githubusercontent.com/103103116/202838983-ce2befa9-c53f-4111-b347-3f550f394887.PNG)
+
+- Quarterly sales of mobile phones
+
+
+![barchart](https://user-images.githubusercontent.com/103103116/202839037-7a25e585-35e8-4bb0-8e14-aac528d1f60d.PNG)
 
 [Return](#introduction)
 ## Module 5: ETL and Apache Airflow
+The data warehouse gets information from several sources, including the transactional OLTP database (MySQL). The OLTP database needs to be propagated to the warehouse on a frequent basis. This data movement can be updated using ETL processes. To connect Mysql and db2, a Python script called "automation.py" will be used.
+
+
+The script will automatically load yesterday's data from the production database into the warehouse.
+
+
+The data platform includes a Big Data repository that is used for analytics using machine learning with Apache Spark. This big data repository gets data from several sources including the data warehouse and the web server log. As data from the web server is logged, it needs to be added to the big data system on a frequent basis, therefore making it an ideal process to automate using a data pipeline.
+
+
+Using Apache Airflow, daily data from the web server log will be extracted, processed and stored in a format to prepare it for loading into the big data platform. The DAG will be called "process_web_log"
+
+
+The mentioned files **"automation.py"** and **"process_web_log.py"** will be available inside this repository.
 
 
 [Return](#introduction)
