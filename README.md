@@ -44,9 +44,6 @@ Knowing the average of something is incredibly useful on an e-commerce business,
 
 Finally, some records are exported into a csv file for future use using *mongoexport* 
 
-![mongoexport](https://user-images.githubusercontent.com/103103116/202837104-667a362a-dcf4-496f-8369-67ba92e5124f.PNG)
-
-
 [Return](#introduction)
 ## Module 3: Data warehouse
 The company retails download-only items like E-books, movies, songs, etc. The company has an international presence and customers from all over the world.
