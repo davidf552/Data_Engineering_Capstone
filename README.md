@@ -34,8 +34,6 @@ After creating an index, the table gets exported using a bash script into a sql 
 ## Module 2: NoSQL
 The company needs a product catalog, so MongoDB is chosen to store the catalog data. All the information comes from a json file provided by the owners, so the first step is to import it to a collection named "electronics"
 
-![mongoimport](https://user-images.githubusercontent.com/103103116/202385299-e2e58496-3338-46b1-9c98-239568bd69ea.PNG)
-
 Then, an index on the field "type" will help in querying the data due to the amount of records in the collection.
 
 ![create-index](https://user-images.githubusercontent.com/103103116/202837002-42380205-d967-42b5-a30f-0372e73521f8.PNG)
