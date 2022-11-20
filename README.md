@@ -30,7 +30,7 @@ After creating an index, the table gets exported using a bash script into a **[s
 [Return](#introduction)
 
 ## Module 2: NoSQL
-The company needs a product catalog, so MongoDB is chosen to store the catalog data. All the information comes from a json file provided by the owners, so the first step is to import it to a collection named "electronics".
+The company needs a product catalog, so MongoDB is chosen to store the catalog data. All the information comes from a **[json file](catalog.json)** provided by the owners, so the first step is to import it to a collection named "electronics".
 
 Then, an index on the field "type" will help in querying the data due to the amount of records in the collection.
 
@@ -40,7 +40,7 @@ Knowing the average of something is incredibly useful on an e-commerce business,
 
 ![mongo-query-mobiles2](https://user-images.githubusercontent.com/103103116/202837068-a5508517-6792-457c-acf1-f278ed628737.PNG)
 
-Finally, some records are exported into a csv file for future use using *mongoexport*. 
+Finally, some records are exported into a **[csv file](electronics.csv)** for future use using *mongoexport*. 
 
 [Return](#introduction)
 ## Module 3: Data warehouse
@@ -56,7 +56,7 @@ With that said, the company would like to create a data warehouse so that it can
 The warehouse will be designed according to the following initial diagram created on PgAdmin:
 ![softcartRelationships](https://user-images.githubusercontent.com/103103116/202838268-60f71c93-e1ef-4608-9dfd-5df056c14bd4.PNG)
 
-The schema will then be exported into the file named "staging.sql":
+The schema will then be exported into the file named ["staging.sql"](staging.sql):
 ![createschema](https://user-images.githubusercontent.com/103103116/202838516-02af1b59-629a-45df-a3e6-92e457d9754c.PNG)
 
 [Return](#introduction)
