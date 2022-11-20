@@ -20,8 +20,7 @@ In this section, a database with a single table is created:
 
 ![createtable](https://user-images.githubusercontent.com/103103116/202383844-f9e417dc-4d41-42ba-ab1e-7117bfad6032.PNG)
 
-Then, data gets imported using phpMyAdmin from a csv file:
-
+Then, data gets imported using phpMyAdmin from a **[csv file:](oltpdata.csv)**
 ![importdata](https://user-images.githubusercontent.com/103103116/202384311-416c1509-a6c2-44bb-a70e-5cf232dbf603.PNG)
 
 After creating an index, the table gets exported using a bash script into a **[sql file.](salesdata.sql)**
